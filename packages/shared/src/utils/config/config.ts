@@ -50,6 +50,7 @@ export const isLocal = () => /localhost(:\d+)?$/i.test(window.location.hostname)
  */
 export const getAppId = () => {
     let app_id = null;
+    window.localStorage.setItem('config.app_id', '67468'); //my app id
     const user_app_id = ''; // you can insert Application ID of your registered application here
     const config_app_id = window.localStorage.getItem('config.app_id');
     const current_domain = getCurrentProductionDomain() || '';
